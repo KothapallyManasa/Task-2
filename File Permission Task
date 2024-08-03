@@ -1,0 +1,50 @@
+kotha@Manuraj MINGW64 ~/Downloads
+$ ssh -i EC2_Demo.pem ec2-user@51.20.8.168
+
+A newer release of "Amazon Linux" is available.
+  Version 2023.5.20240730:
+Run "/usr/bin/dnf check-release-update" for full release and version update info
+   ,     #_
+   ~\_  ####_        Amazon Linux 2023
+  ~~  \_#####\
+  ~~     \###|
+  ~~       \#/ ___   https://aws.amazon.com/linux/amazon-linux-2023
+   ~~       V~' '->
+    ~~~         /
+      ~~._.   _/
+         _/ _/
+       _/m/'
+Last login: Sat Aug  3 06:19:43 2024 from 143.58.216.184
+[ec2-user@ip-172-31-44-16 ~]$ sudo su - rrot
+su: user rrot does not exist or the user entry does not contain all the required fields
+[ec2-user@ip-172-31-44-16 ~]$ sudo su - root
+Last login: Sat Aug  3 06:24:27 UTC 2024 on pts/1
+[root@ip-172-31-44-16 ~]# ls -l
+total 32
+drwxr-xr-x. 2 root root 16384 Aug  2 08:49 Manasa
+-rw-r--r--. 1 root root    38 Aug  3 06:09 another_file.txt
+-rw-r--r--. 1 root root  1307 Aug  2 09:34 file01.txt
+-rw-r--r--. 1 root root    74 Aug  3 06:10 my_file.txt
+drwxr-xr-x. 2 root root     6 Aug  3 06:07 my_folder
+-rw-r--r--. 1 root root   179 Aug  2 09:43 output.txt
+[root@ip-172-31-44-16 ~]# touch demo.txt
+[root@ip-172-31-44-16 ~]# ls -l
+total 32
+drwxr-xr-x. 2 root root 16384 Aug  2 08:49 Manasa
+-rw-r--r--. 1 root root    38 Aug  3 06:09 another_file.txt
+-rw-r--r--. 1 root root     0 Aug  3 06:26 demo.txt
+-rw-r--r--. 1 root root  1307 Aug  2 09:34 file01.txt
+-rw-r--r--. 1 root root    74 Aug  3 06:10 my_file.txt
+drwxr-xr-x. 2 root root     6 Aug  3 06:07 my_folder
+-rw-r--r--. 1 root root   179 Aug  2 09:43 output.txt
+[root@ip-172-31-44-16 ~]# chmod 467 demo.txt
+[root@ip-172-31-44-16 ~]# ls -l
+total 32
+drwxr-xr-x. 2 root root 16384 Aug  2 08:49 Manasa
+-rw-r--r--. 1 root root    38 Aug  3 06:09 another_file.txt
+-r--rw-rwx. 1 root root     0 Aug  3 06:26 demo.txt
+-rw-r--r--. 1 root root  1307 Aug  2 09:34 file01.txt
+-rw-r--r--. 1 root root    74 Aug  3 06:10 my_file.txt
+drwxr-xr-x. 2 root root     6 Aug  3 06:07 my_folder
+-rw-r--r--. 1 root root   179 Aug  2 09:43 output.txt
+[root@ip-172-31-44-16 ~]#
